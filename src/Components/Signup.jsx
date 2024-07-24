@@ -20,6 +20,20 @@ const Signup = () => {
 
     } catch (error) {
       console.log(error.message); 
+      const Catchnotify = () => {
+        toast.success(`${error.message}:Please try to sign in`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+        });
+    }
+    Catchnotify()
+
     }
   };
   const notify = () => {
@@ -34,6 +48,7 @@ const Signup = () => {
         theme: "dark",
     });
 }
+
 
   return (
     <section>
